@@ -22,8 +22,10 @@ if (!tty.getWindowSize) {
 }
 
 let mocha = new Mocha({
+    reporter: 'mocha-jenkins-reporter',
     ui: 'tdd',
     useColors: true,
+    timeout: 15000
 });
 
 function configure(mochaOpts: any): void {
